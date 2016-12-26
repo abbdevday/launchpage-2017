@@ -40,19 +40,18 @@ h2 {
     min-width: 100%;
     min-height: 100%;
     background-image: url("../gfx/mask.png");
-    z-index: 0;
+    z-index: -100;
     top: 0;
     left: 0;
 }
 
 .wrap {
-    z-index: 10;
+    position: relative;;
+
 }
 
 .content {
     background-color: #007CDD;
-    z-index: inherit;
-
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
