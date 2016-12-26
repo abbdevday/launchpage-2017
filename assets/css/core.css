@@ -52,10 +52,32 @@ h2 {
 
 .content {
     background-color: #007CDD;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.sep-line {
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #0167B3;
+    border-bottom: 1px solid #269FF8;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.info {
+    background-color: rgba(0, 124, 221, 0.9);
+    color: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+
+    padding-bottom: 20px;
+
+
+    text-align: center;
 }
 
 .content h2 {
