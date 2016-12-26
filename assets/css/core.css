@@ -1,3 +1,36 @@
+@font-face {
+  font-family: 'BebasRegular';
+  src: url('../fonts/bebas/BEBAS___-webfont.eot');
+  src: url('../fonts/bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bebas/BEBAS___-webfont.woff') format('woff'),
+       url('../fonts/bebas/BEBAS___-webfont.ttf') format('truetype'),
+       url('../fonts/bebas/BEBAS___-webfont.svg#bebasregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'OpenSansBold', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 .nice-mask {
     position: absolute;
     width: 100%;
@@ -10,4 +43,23 @@
     z-index: 0;
     top: 0;
     left: 0;
+}
+
+.wrap {
+    z-index: 10;
+}
+
+.content {
+    background-color: #007CDD;
+    z-index: inherit;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.content h2 {
+    margin: 30px 0;
+    font-size: 2em;
 }

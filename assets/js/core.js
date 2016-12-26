@@ -2,9 +2,29 @@
     'use strict';
 
     var win = $(window),
+        wrap = $('.wrap'),
+        wraph,
         backstretch,
+        w, h,
         mask = $('.nice-mask'),
         onWindowResize = function (t) {
+            var maxp = 0;
+
+            w = win.width();
+            h = win.height();
+            wraph = wrap.height();
+
+            wrap.animate(true, true).animate({
+                'margin-top': (wraph < h ? parseInt((h - wraph) / 2, 10) : 20),
+                'opacity': 1
+            },
+            t,
+            function () {
+                $('body').css({
+                    'overflow': 'inherit'
+                });
+            });
+
             recalculateMask();
         },
         recalculateMask = function () {
