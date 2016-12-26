@@ -20,6 +20,17 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     font-family: 'OpenSansBold', Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -50,6 +61,15 @@ h2 {
 
 }
 
+.logo {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.logo img {
+    width: 40%;
+}
+
 .content {
     background-color: #007CDD;
     border-top-left-radius: 5px;
@@ -68,16 +88,26 @@ h2 {
 }
 
 .info {
+    font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
     background-color: rgba(0, 124, 221, 0.9);
     color: #ffffff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
 
     padding-bottom: 20px;
 
 
     text-align: center;
+}
+
+.info .glyphicon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.links {
+
 }
 
 .content h2 {
