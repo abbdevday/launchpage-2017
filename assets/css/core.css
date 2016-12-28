@@ -1,15 +1,4 @@
 @font-face {
-  font-family: 'BebasRegular';
-  src: url('../fonts/bebas/BEBAS___-webfont.eot');
-  src: url('../fonts/bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/bebas/BEBAS___-webfont.woff') format('woff'),
-       url('../fonts/bebas/BEBAS___-webfont.ttf') format('truetype'),
-       url('../fonts/bebas/BEBAS___-webfont.svg#bebasregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
     font-family: 'OpenSansBold';
     src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot');
     src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -27,18 +16,6 @@
        url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
        url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
        url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mono Social Icons Font';
-    src: url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.eot');
-    src: url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -107,7 +84,6 @@ h2 {
 
 .info > div {
     padding-top: 15px;
-    /*padding-bottom: 15px;*/
     text-align: center;
 }
 
@@ -126,10 +102,14 @@ h2 {
 
 .links a {
     color: #ffffff;
+    margin-right: 7px;
 }
 
 .links .social {
     text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 130%;
 }
 
 
@@ -137,37 +117,4 @@ h2 {
     .links .social {
         text-align: center;
     }
-}
-
-.symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
-    -webkit-text-rendering: optimizeLegibility;
-    -moz-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
-
-a.symbol:before {
-    content: attr(title);
-    margin-right: 0.3em;
-    font-size: 170%;
-}
-
-@media (max-width: 768px) {
-    a.symbol:before {
-        font-size: 200%;
-    }
-}
-
-a.symbol:hover,
-a.symbol:visited,
-a.symbol:active,
-a.symbol:focus {
-    text-decoration: none;
 }
