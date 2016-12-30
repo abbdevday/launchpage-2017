@@ -26,6 +26,21 @@
         <meta name="twitter:title" content="DevDay 2017">
         <meta name="twitter:description" content="We are preparing the next DevDay for you. Make sure to save the date. We're going to meet for the 7th time on 13-15 September 2017 in Kraków.">
         <meta name="twitter:image" content="http://devday.pl/launchpage-2017/assets/gfx/fb_cover_2017_launch.png">
+
+        <script type="text/javascript">
+            var cfp_span = 31, tickets_span = 59, event_span = 255,
+                cfp_date = new Date(2017, 1, 1, 9),
+                tickets_date = new Date(2017, 2, 1, 9),
+                event_date = new Date(2017, 8, 13, 9),
+                now = new Date(2017, 0, 21, 9);
+
+            var to_cfp = cfp_date.getTime() - now.getTime(),
+                to_cfp_days = Math.ceil(to_cfp / (1000 * 60 * 60 * 24)),
+                to_tickets = tickets_date.getTime() - now.getTime(),
+                to_tickets_days = Math.ceil(to_tickets / (1000 * 60 * 60 * 24)),
+                to_event = event_date.getTime() - now.getTime(),
+                to_event_days = Math.ceil(to_event / (1000 * 60 * 60 * 24));
+        </script>
     </head>
     <body>
         <div class="container">
@@ -56,6 +71,62 @@
                                 600 attendees
                             </div>
                         </div>
+                        <div class="row countdowns">
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="progress-label">CFP in:</div>
+                                <div class="radial-progress cfp-progress">
+                                    <div class="circle">
+                                        <div class="mask full">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill"></div>
+                                            <div class="fill fix"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <div class="inset">
+                                		<div class="counter"></div>
+                                	</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="progress-label">Tickets in:</div>
+                                <div class="radial-progress tickets-progress">
+                                    <div class="circle">
+                                        <div class="mask full">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill"></div>
+                                            <div class="fill fix"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <div class="inset">
+                                		<div class="counter"></div>
+                                	</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="progress-label">Event in:</div>
+                                <div class="radial-progress event-progress">
+                                    <div class="circle">
+                                        <div class="mask full">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill"></div>
+                                            <div class="fill fix"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <div class="inset">
+                                		<div class="counter"></div>
+                                	</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row links">
                             <div class="sep-line"></div>
                             <div class="col-xs-12">
@@ -78,5 +149,56 @@
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
         <script type="text/javascript" src="assets/js/core.js"></script>
+        <script type="text/javascript">
+            var cfp_progress = (1 - to_cfp_days / cfp_span) * 360,
+                tickets_progress = (1 - to_tickets_days / tickets_span) * 360,
+                event_progress = (1 - to_event_days / event_span) * 360;
+
+            $('.cfp-progress .counter').html('<div>' + to_cfp_days + '</div>' + ' day' + (to_cfp_days == 1 ? '' : 's' ));
+            $('.tickets-progress .counter').html('<div>' + to_tickets_days + '</div>' + ' day' + (to_tickets_days == 1 ? '' : 's' ));
+            $('.event-progress .counter').html('<div>' + to_event_days + '</div>' + ' day' + (to_event_days == 1 ? '' : 's' ));
+
+            $('.cfp-progress .circle .mask.full, .cfp-progress .circle .fill')
+                .css({
+                    '-webkit-transform': 'rotate(' + (cfp_progress / 2) + 'deg)',
+                    '-ms-transform': 'rotate(' + (cfp_progress / 2) + 'deg)',
+                    'transform': 'rotate(' + (cfp_progress / 2) + 'deg)'
+                });
+
+            $('.cfp-progress .circle .fill.fix')
+                .css({
+                    '-webkit-transform': 'rotate(' + cfp_progress + 'deg)',
+                    '-ms-transform': 'rotate(' + cfp_progress + 'deg)',
+                    'transform': 'rotate(' + cfp_progress + 'deg)'
+                });
+
+            $('.tickets-progress .circle .mask.full, .tickets-progress .circle .fill')
+                .css({
+                    '-webkit-transform': 'rotate(' + (tickets_progress / 2) + 'deg)',
+                    '-ms-transform': 'rotate(' + (tickets_progress / 2) + 'deg)',
+                    'transform': 'rotate(' + (tickets_progress / 2) + 'deg)'
+                });
+
+            $('.tickets-progress .circle .fill.fix')
+            .css({
+                '-webkit-transform': 'rotate(' + tickets_progress + 'deg)',
+                '-ms-transform': 'rotate(' + tickets_progress + 'deg)',
+                'transform': 'rotate(' + tickets_progress + 'deg)'
+            });
+
+            $('.event-progress .circle .mask.full, .event-progress .circle .fill')
+                .css({
+                    '-webkit-transform': 'rotate(' + (event_progress / 2) + 'deg)',
+                    '-ms-transform': 'rotate(' + (event_progress / 2) + 'deg)',
+                    'transform': 'rotate(' + (event_progress / 2) + 'deg)'
+                });
+
+            $('.event-progress .circle .fill.fix')
+                .css({
+                    '-webkit-transform': 'rotate(' + event_progress + 'deg)',
+                    '-ms-transform': 'rotate(' + event_progress + 'deg)',
+                    'transform': 'rotate(' + event_progress + 'deg)'
+                });
+        </script>
     </body>
 </html>

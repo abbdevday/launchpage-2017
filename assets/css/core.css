@@ -118,3 +118,93 @@ h2 {
         text-align: center;
     }
 }
+
+.countdowns {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    color: #666666;
+}
+
+.countdowns .progress-label {
+    margin-bottom: 5px;
+    font-size: 120%;
+}
+
+.countdowns > div {
+    margin: 10px 0;
+}
+
+.radial-progress {
+    background-color: #d6dadc;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.radial-progress .circle .fill,
+.radial-progress .circle .mask,
+.radial-progress .circle .shadow {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radial-progress .circle .shadow {
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2) inset;
+}
+
+.radial-progress .circle .mask,
+.radial-progress .circle .fill {
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+}
+
+.radial-progress .circle .mask {
+    clip: rect(0px, 120px, 120px, 60px);
+}
+
+.radial-progress .circle .mask .fill {
+    clip: rect(0px, 60px, 120px, 0px);
+}
+
+.cfp-progress .circle .mask .fill {
+    background-color: #75C044;
+}
+
+.tickets-progress .circle .mask .fill {
+    background-color: #007CBF;
+}
+
+.event-progress .circle .mask .fill {
+    background-color: #CDDC29;
+}
+
+.radial-progress .circle .mask.full,
+.radial-progress .circle .fill {
+}
+
+.radial-progress .circle .fill.fix {
+}
+
+.radial-progress .inset {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.radial-progress .counter {
+    width: 75%;
+    height: 75%;
+    font-size: 150%;
+}
