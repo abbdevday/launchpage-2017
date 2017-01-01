@@ -32,7 +32,7 @@
                 cfp_date = new Date(2017, 1, 1, 9),
                 tickets_date = new Date(2017, 2, 1, 9),
                 event_date = new Date(2017, 8, 13, 9),
-                now = new Date(2017, 0, 21, 9);
+                now = new Date();
 
             var to_cfp = cfp_date.getTime() - now.getTime(),
                 to_cfp_days = Math.ceil(to_cfp / (1000 * 60 * 60 * 24)),
