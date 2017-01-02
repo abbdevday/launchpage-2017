@@ -29,9 +29,9 @@
 
         <script type="text/javascript">
             var cfp_span = 31, tickets_span = 59, event_span = 255,
-                cfp_date = new Date(2017, 1, 1, 9),
-                tickets_date = new Date(2017, 2, 1, 9),
-                event_date = new Date(2017, 8, 13, 9),
+                cfp_date = new Date(2017, 1, 1, 0, 0, 1),
+                tickets_date = new Date(2017, 2, 1, 0, 0, 1),
+                event_date = new Date(2017, 8, 13, 0, 0, 1),
                 now = new Date();
 
             var to_cfp = cfp_date.getTime() - now.getTime(),
@@ -199,6 +199,17 @@
                     '-ms-transform': 'rotate(' + event_progress + 'deg)',
                     'transform': 'rotate(' + event_progress + 'deg)'
                 });
+        </script>
+        <script src="//www.google-analytics.com/analytics.js" async=""></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-33563827-1', 'auto');
+            ga('send', 'pageview');
+
         </script>
     </body>
 </html>
